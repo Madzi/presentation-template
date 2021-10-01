@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>madzi.utils</groupId>
+    <artifactId>presentation</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Template for Presentation</name>
+    <description>Template for Presentation based on asciidoc and revealjs</description>
+    <url>https://github.com/presentation-template/</url>
+    <inceptionYear>2021</inceptionYear>
+
+    <licenses>
+        <license>
+            <name>Apache Common 2.0</name>
+            <distribution>repo</distribution>
+            <url>LICENSE</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>Madzi</id>
+            <name>Dmitry Eliseev</name>
+            <email>eliseevsan@gmail.com</email>
+            <timezone>CET</timezone>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>https://github.com/Madzi/presentation-template</url>
+        <connection>scm:git:git://github.com/Madzi/presentation-template.git</connection>
+        <developerConnection>scm:git:git@github.com:Madzi/presentation-template.git</developerConnection>
+    </scm>
+
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/Madzi/presentation-template/issues</url>
+    </issueManagement>
+
+    <properties>
+        <!-- Encoding -->
+        <project.encoding>UTF-8</project.encoding>
+        <project.build.sourceEncoding>${project.encoding}</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>${project.encoding}</project.reporting.outputEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.asciidoctor</groupId>
+                <artifactId>asciidoctor-maven-plugin</artifactId>
+                <version>2.2.1</version>
+                <configuration>
+                    <backend>revealjs</backend>
+                    <requires>
+                        <require>asciidoctor-revealjs</require>
+                        <require>asciidoctor-diagram</require>
+                    </requires>
+                    <attributes>
+                        <revealjsdir>https://cdn.jsdelivr.net/npm/reveal.js@3.9.2</revealjsdir>
+                    </attributes>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.asciidoctor</groupId>
+                        <artifactId>asciidoctorj</artifactId>
+                        <version>2.5.2</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.asciidoctor</groupId>
+                        <artifactId>asciidoctorj-revealjs</artifactId>
+                        <version>4.1.0</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.asciidoctor</groupId>
+                        <artifactId>asciidoctorj-diagram</artifactId>
+                        <version>2.2.1</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+</project>

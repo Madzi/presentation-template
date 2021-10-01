@@ -1,0 +1,29 @@
+= Presentation
+
+== Stage 1
+
+* Demo 1
+* Demo 2
+* Demo 3
+
+== Stage 2
+
+* Demo 1
+* Demo 2
+* Demo 3
+
+=== Stage 2.1
+
+[source,java]
+----
+public enum Color {
+   RED, GREEN, BLUE;
+}
+----
+
+== Stage 3
+
+[plantuml]
+----
+User -> Application
+----
