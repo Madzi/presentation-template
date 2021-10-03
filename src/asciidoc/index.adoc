@@ -1,4 +1,8 @@
-= Presentation
+= Title of presentation
+
+Subtitle of presentation
+
+Author, Date
 
 == Stage 1
 
@@ -17,9 +21,15 @@
 [source,java]
 ----
 public enum Color {
-   RED, GREEN, BLUE;
+   RED,
+   GREEN,
+   BLUE;
 }
 ----
+
+=== Stage 2.2
+
+image::images/sunset.jpg[Sunset]
 
 == Stage 3
 
